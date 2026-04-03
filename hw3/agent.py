@@ -1,4 +1,4 @@
-"""Recipe suggestion agent — reused across all homeworks."""
+"""Recipe suggestion agent — copied from HW1"""
 
 from dotenv import load_dotenv
 
@@ -33,18 +33,16 @@ Be friendly, concise, and practical.\
 """
 
 
-def get_agent(checkpointer=None):
-    """Return a configured recipe agent.
-
-    Parameters
-    ----------
-    checkpointer : optional
-        A LangGraph checkpointer for conversation memory.
-        Pass ``None`` (default) for stateless, one-shot usage.
-    """
-    return create_agent(
-        model="gpt-4o-mini",
+recipe_bot = create_agent(
+        model="gpt-5.4-nano",
         tools=[web_search],
         system_prompt=SYSTEM_PROMPT,
-        checkpointer=checkpointer,
+        name="Recipe_Bot"
+    )
+
+recipe_bot_5nano = create_agent(
+        model="gpt-5-nano",
+        tools=[web_search],
+        system_prompt=SYSTEM_PROMPT,
+        name="Recipe_Bot"
     )

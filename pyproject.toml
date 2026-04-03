@@ -2,7 +2,7 @@
 name = "ai-evals-hw-langsmith"
 version = "0.1.0"
 description = "Companion repo for Hamel & Shreya's AI Evals course — LangSmith edition"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 dependencies = [
     "langchain>=0.3",
     "langchain-openai>=0.3",
@@ -14,4 +14,5 @@ dependencies = [
     "matplotlib>=3",
     "seaborn>=0.13",
     "jupyter>=1",
+    "rank-bm25>=0.2",
 ]
