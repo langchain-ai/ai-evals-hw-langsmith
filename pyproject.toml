@@ -5,7 +5,7 @@ description = "Companion repo for Hamel & Shreya's AI Evals course — LangSmith
 requires-python = ">=3.11,<3.14"
 dependencies = [
     "langchain>=0.3",
-    "langchain-openai>=0.3",
+    "langchain-openai>=1.1.14",
     "langsmith>=0.7.31",
     "langgraph>=0.4",
     "tavily-python>=0.5",
